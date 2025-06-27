@@ -44,8 +44,8 @@ Before you begin, ensure you have the following installed:
    - Create a `.env` file in the root directory
    - Add your Supabase credentials:
      ```env
-     VITE_SUPABASE_URL=your_supabase_url
-     VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+     VITE_SUPABASE_URL=https://irrtdgaaggawkscfcqec.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlycnRkZ2FhZ2dhd2tzY2ZjcWVjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MTAxMjA5MiwiZXhwIjoyMDY2NTg4MDkyfQ.0tWKdvPksyxr1oZeSUpwJBj3bWNJbVGMPdqbzf_q8u8
      ```
 
 4. **Database Setup**
