@@ -48,32 +48,7 @@ Before you begin, ensure you have the following installed:
 VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlycnRkZ2FhZ2dhd2tzY2ZjcWVjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MTAxMjA5MiwiZXhwIjoyMDY2NTg4MDkyfQ.0tWKdvPksyxr1oZeSUpwJBj3bWNJbVGMPdqbzf_q8u8
      ```
 
-4. **Database Setup**
-   - In your Supabase project, create the following tables:
 
-   `urls` table:
-   ```sql
-   create table urls (
-     id uuid default uuid_generate_v4() primary key,
-     short_code text unique not null,
-     long_url text not null,
-     created_at timestamp with time zone default timezone('utc'::text, now()) not null,
-     expires_at timestamp with time zone not null,
-     click_count integer default 0
-   );
-   ```
-
-   Create the click count function:
-   ```sql
-   create or replace function increment_click_count(short_code_param text)
-   returns void as $$
-   begin
-     update urls
-     set click_count = click_count + 1
-     where short_code = short_code_param;
-   end;
-   $$ language plpgsql;
-   ```
 
 5. **Start the development server**
    ```bash
